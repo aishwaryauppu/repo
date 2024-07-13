@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test My Name</title>
+</head>
+<body>
+    <h1>Test My Name</h1>
+    <form id="nameForm">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name">
+        <button type="button" onclick="testName()">Submit</button>
+    </form>
+    <p id="output"></p>
+
+    <script>
+        function testName() {
+            var name = document.getElementById('name').value;
+            var output = document.getElementById('output');
+            if (name) {
+                output.innerHTML = "Hello, " + name + "!";
+            } else {
+                output.innerHTML = "Please enter your name.";
+            }
+        }
+    </script>
+</body>
+</html>
